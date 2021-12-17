@@ -23,27 +23,32 @@ export class MenuBarComponent implements OnInit {
           items: [
               {
                 label: 'Ingreso',
-                icon: 'pi pi-plus'
+                icon: 'pi pi-plus',
+                routerLink: '/ingreso'
 
               },
               {
                 label: 'Egreso',
-                icon: 'pi pi-minus'
+                icon: 'pi pi-minus',
+                routerLink: '/egreso'
 
               },
               {
                 label: 'Pago',
-                icon: 'pi pi-dollar'
+                icon: 'pi pi-dollar',
+                routerLink: '/pago'
 
               },
               {
                 label: 'Nómina',
-                icon: 'pi pi-credit-card'
+                icon: 'pi pi-credit-card',
+                routerLink: '/nomina'
 
               },
               {
                 label: 'traslado',
-                icon: 'pi pi-car'
+                icon: 'pi pi-car',
+                routerLink: '/traslado'
 
               }
           ]

@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PrimeNGModule } from './prime-ng/prime-ng.module';
+import { InvoicesModule } from './invoices/invoices.module';
+import { ListInvoicesModule } from './list-invoices/list-invoices.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PrimeNGModule } from './prime-ng/prime-ng.module';
     SharedModule,
     BrowserAnimationsModule,
     FormsModule,
-    PrimeNGModule
+    PrimeNGModule,
+    InvoicesModule,
+    ListInvoicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

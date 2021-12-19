@@ -9,9 +9,6 @@ import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 import { FormsModule } from '@angular/forms';
 
 
-
-
-
 @NgModule({
   declarations: [
     IngresoComponent,

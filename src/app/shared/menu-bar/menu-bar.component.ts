@@ -56,6 +56,7 @@ export class MenuBarComponent implements OnInit {
       {
           label: 'Facturas existentes',
           icon: 'pi pi-table',
+          routerLink: ' '
 
       }
   ];

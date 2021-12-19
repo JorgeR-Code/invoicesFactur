@@ -5,6 +5,7 @@ import { EgresoComponent } from './pages/egreso/egreso.component';
 import { PagoComponent } from './pages/pago/pago.component';
 import { NominaComponent } from './pages/nomina/nomina.component';
 import { TrasladoComponent } from './pages/traslado/traslado.component';
+import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 
 
 
@@ -17,7 +18,8 @@ import { TrasladoComponent } from './pages/traslado/traslado.component';
     TrasladoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimeNGModule
   ],
   exports:[
     IngresoComponent,

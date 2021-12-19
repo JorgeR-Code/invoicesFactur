@@ -7,6 +7,7 @@ import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { PrimeNGModule } from './prime-ng/prime-ng.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    PrimeNGModule
   ],
   providers: [],
   bootstrap: [AppComponent]

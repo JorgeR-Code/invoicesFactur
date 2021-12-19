@@ -6,6 +6,9 @@ import { PagoComponent } from './pages/pago/pago.component';
 import { NominaComponent } from './pages/nomina/nomina.component';
 import { TrasladoComponent } from './pages/traslado/traslado.component';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
+import { FormsModule } from '@angular/forms';
+
+
 
 
 
@@ -19,7 +22,8 @@ import { PrimeNGModule } from '../prime-ng/prime-ng.module';
   ],
   imports: [
     CommonModule,
-    PrimeNGModule
+    PrimeNGModule,
+    FormsModule
   ],
   exports:[
     IngresoComponent,
@@ -27,6 +31,7 @@ import { PrimeNGModule } from '../prime-ng/prime-ng.module';
     PagoComponent,
     NominaComponent,
     TrasladoComponent
+
   ]
 })
 export class InvoicesModule { }

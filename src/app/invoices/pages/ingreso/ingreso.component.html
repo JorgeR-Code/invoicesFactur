@@ -1,12 +1,12 @@
 <div class="container mt-2 w-full">
   <div class="flex justify-content-center align-items-center ">
-    <div class="mt-3 header text-4xl md:text-6xl lg:text-6xl h-3rem md:h-5rem lg:h-5rem ">
+    <div class="mt-3 header text-4xl md:text-5xl lg:text-5xl h-3rem md:h-5rem lg:h-5rem ">
       <p>Tipo "I" (Ingreso)</p>
     </div>
   </div>
   <div class="card">
 
-    <p class="flex justify-content-center title text-2xl md:text-3xl lg:text-3xl mb-4">Datos del cliente</p>
+    <p class="flex justify-content-center title text-2xl md:text-3xl lg:text-3xl my-4">Datos del cliente</p>
     <div class="grid fluid">
 
       <div class="field col-12 md:col-4">
@@ -32,12 +32,13 @@
 
     </div>
 
-    <p class="flex justify-content-center title text-2xl md:text-3xl lg:text-3xl mb-4">Datos del producto o servicio</p>
+    <p class="flex justify-content-center title text-2xl md:text-3xl lg:text-3xl my-4">Datos del producto o servicio</p>
     <div class="grid fluid">
 
-      <div class="field col-12 md:col-1">
+      <div class="field col-12 md:col-2">
           <span class="p-float-label">
-            <input id="cantidad" type="text" class="w-full" pInputText>
+            <p-inputNumber [(ngModel)]="quantity" mode="decimal" inputStyleClass="w-full" [showButtons]="true" inputId="cantidad" [min]="1" [max]="1000">
+            </p-inputNumber>
             <label for="cantidad">Cantidad</label>
           </span>
       </div>
@@ -55,60 +56,58 @@
             <label for="clave_ps">Clave del producto/servicio</label>
           </span>
       </div>
-      <div class="field col-12 md:col-3">
+      <div class="field col-12 md:col-2">
           <span class="p-float-label">
-            <input id="precio" type="text" class="w-full" pInputText>
+            <p-inputNumber [(ngModel)]="price" inputId="precio" inputStyleClass="w-full" mode="decimal" [minFractionDigits]="2" [maxFractionDigits]="2"></p-inputNumber>
             <label for="precio">Precio</label>
           </span>
       </div>
       <div class="field col-12 md:col-2">
           <span class="p-float-label">
-            <input id="codigo_m" type="text" class="w-full" pInputText>
-            <label for="codigo_m">Código de la moneda</label>
+            <p-dropdown [options]="codeMon" [(ngModel)]="selectedCode" optionLabel="name" placeholder="Seleccione la moneda" styleClass="w-full"></p-dropdown>
           </span>
       </div>
 
     </div>
 
-    <p class="flex justify-content-center title text-2xl md:text-3xl lg:text-3xl mb-4">Datos adicionales</p>
+    <p class="flex justify-content-center title text-2xl md:text-3xl lg:text-3xl my-4">Datos adicionales</p>
     <div class="grid fluid">
 
-      <div class="field col-12 md:col-1">
+      <div class="field col-12 md:col-3">
           <span class="p-float-label">
-            <input id="cantidad" type="text" class="w-full" pInputText>
-            <label for="cantidad">Cantidad</label>
+            <p-dropdown [options]="payForm" id="payForm" [(ngModel)]="payFormSelected" optionLabel="name" placeholder="." styleClass="w-full"></p-dropdown>
+            <label for="payForm">Forma de pago</label>
           </span>
       </div>
 
       <div class="field col-12 md:col-3">
           <span class="p-float-label">
-            <input id="descripcion" type="text" class="w-full" pInputText>
-            <label for="descripcion">Descripción</label>
+            <p-dropdown [options]="payMeth" id="payMeth" [(ngModel)]="payMethSelected" optionLabel="name" placeholder="." styleClass="w-full"></p-dropdown>
+            <label for="payMeth">Método de pago</label>
           </span>
       </div>
 
       <div class="field col-12 md:col-3">
           <span class="p-float-label">
-            <input id="clave_ps" type="text" class="w-full" pInputText>
-            <label for="clave_ps">Clave del producto/servicio</label>
+            <p-dropdown [options]="cfdiUse" id="cfdiUse" [(ngModel)]="cfdiUseSelected" optionLabel="name" placeholder="." styleClass="w-full"></p-dropdown>
+            <label for="cfdiUse">Uso del CFDI</label>
           </span>
       </div>
       <div class="field col-12 md:col-3">
           <span class="p-float-label">
-            <input id="precio" type="text" class="w-full" pInputText>
-            <label for="precio">Precio</label>
-          </span>
-      </div>
-      <div class="field col-12 md:col-2">
-          <span class="p-float-label">
-            <input id="codigo_m" type="text" class="w-full" pInputText>
-            <label for="codigo_m">Código de la moneda</label>
+            <p-calendar inputId="fecha" type="text" styleClass="w-full" [showButtonBar]="true" [showIcon]="true"></p-calendar>
+            <label for="fecha">Fecha</label>
           </span>
       </div>
 
+    </div>
+
+    <div class="flex w-full justify-content-center my-5">
+      <p-button styleClass="p-button-lg md:p-button" label="Emitir factura" icon="pi pi-check"></p-button>
     </div>
 
   </div>
+
 </div>
 
 

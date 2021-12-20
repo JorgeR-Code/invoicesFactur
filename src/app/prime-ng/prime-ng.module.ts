@@ -7,6 +7,11 @@ import {AvatarGroupModule} from 'primeng/avatargroup';
 import {TieredMenuModule} from 'primeng/tieredmenu';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputNumberModule} from 'primeng/inputnumber';
+
+
 
 
 
@@ -23,7 +28,10 @@ import {InputTextModule} from 'primeng/inputtext';
     AvatarGroupModule,
     TieredMenuModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    CalendarModule,
+    DropdownModule,
+    InputNumberModule
   ]
 })
 export class PrimeNGModule { }

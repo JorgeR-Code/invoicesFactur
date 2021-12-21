@@ -25,8 +25,8 @@
 
       <div class="field col-12 md:col-4">
           <span class="p-float-label">
-            <input id="cliente_TIN" type="text" class="w-full" pInputText>
-            <label for="cliente_TIN">Número de identificación (TIN)</label>
+            <p-inputMask inputId="cliente_RFC" [autoClear]="autoclear" [(ngModel)]="RFC" mask="aaa*99999****?" styleClass="w-full"></p-inputMask>
+            <label for="cliente_RFC">Registro Federal de Contribuyentes (RFC)</label>
           </span>
       </div>
 

@@ -22,6 +22,8 @@ export class IngresoComponent implements OnInit {
 
   quantity: number = 1;
   price!: number;
+  RFC!: string;
+  autoclear: boolean = false;
 
   constructor(private valueFields: ValueFieldsService) { }
 

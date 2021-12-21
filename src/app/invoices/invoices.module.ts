@@ -6,7 +6,7 @@ import { PagoComponent } from './pages/pago/pago.component';
 import { NominaComponent } from './pages/nomina/nomina.component';
 import { TrasladoComponent } from './pages/traslado/traslado.component';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     PrimeNGModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     IngresoComponent,

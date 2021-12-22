@@ -11,7 +11,7 @@ import {CalendarModule} from 'primeng/calendar';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {InputMaskModule} from 'primeng/inputmask';
-
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 
 
@@ -32,7 +32,8 @@ import {InputMaskModule} from 'primeng/inputmask';
     CalendarModule,
     DropdownModule,
     InputNumberModule,
-    InputMaskModule
+    InputMaskModule,
+    RadioButtonModule
   ]
 })
 export class PrimeNGModule { }

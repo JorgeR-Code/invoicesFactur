@@ -1,1 +1,105 @@
-<p>pago works!</p>
+<div class="container mt-2 w-full">
+  <div class="flex justify-content-center align-items-center ">
+    <div class="mt-3 header text-4xl md:text-5xl lg:text-5xl h-3rem md:h-5rem lg:h-5rem ">
+      <p>Tipo "I" (Ingreso)</p>
+    </div>
+  </div>
+  <div class="card">
+
+    <p class="flex justify-content-center title text-2xl md:text-3xl lg:text-3xl my-4">Datos del cliente</p>
+    <div class="grid fluid">
+
+      <div class="field col-12 md:col-4">
+          <span class="p-float-label">
+            <input id="cliente_nombre" type="text" class="w-full" pInputText>
+            <label for="cliente_nombre">Nombre Fiscal o Razón Social</label>
+          </span>
+      </div>
+
+      <div class="field col-12 md:col-4">
+          <span class="p-float-label">
+            <input id="cliente_correo" type="email" class="w-full" pInputText ngModel [email]="true">
+            <label for="cliente_correo">Correo electrónico</label>
+          </span>
+      </div>
+
+      <div class="field col-12 md:col-4">
+          <span class="p-float-label">
+            <p-inputMask inputId="cliente_RFC" slotChar=" " [autoClear]="autoclear" [(ngModel)]="RFC" mask="aaa*99999****?" styleClass="w-full"></p-inputMask>
+            <label for="cliente_RFC">Registro Federal de Contribuyentes (RFC)</label>
+          </span>
+      </div>
+
+    </div>
+
+    <p class="flex justify-content-center title text-2xl md:text-3xl lg:text-3xl my-4">Datos del pago</p>
+    <div class="grid fluid">
+
+      <div class="field col-12 md:col-2">
+        <span class="p-float-label">
+          <p-dropdown [options]="payForm" id="payForm" [(ngModel)]="payFormSelected" optionLabel="name" placeholder="Seleccionar" styleClass="w-full"></p-dropdown>
+          <label for="payForm">Forma de pago</label>
+        </span>
+      </div>
+
+      <div class="field col-12 md:col-3">
+          <span class="p-float-label">
+            <input id="op_reference" type="text" class="w-full" pInputText>
+            <label for="op_reference">Referencia de la operación</label>
+          </span>
+      </div>
+
+      <div class="field col-12 md:col-5">
+        <span class="p-float-label">
+          <input id="UUID" type="text" class="w-full" pInputText>
+          <label for="UUID">Folios fiscales (UUID) de facturas relacionadas</label>
+        </span>
+      </div>
+
+      <div class="field col-12 md:col-2">
+        <span class="p-float-label">
+          <p-calendar inputId="fecha" type="text" styleClass="w-full" [showButtonBar]="true" [showIcon]="true"></p-calendar>
+          <label for="fecha">Fecha</label>
+        </span>
+    </div>
+
+    <div class="grid fluid">
+
+      <div class="field col-12 md:col-3">
+        <span class="p-float-label">
+          <p-inputNumber [(ngModel)]="last_balance" inputId="last_balance" inputStyleClass="w-full" mode="decimal" [minFractionDigits]="2" [maxFractionDigits]="2"></p-inputNumber>
+          <label for="last_balance">Balance anterior</label>
+        </span>
+      </div>
+      <div class="field col-12 md:col-3">
+        <span class="p-float-label">
+          <p-inputNumber [(ngModel)]="installment" mode="decimal" inputStyleClass="w-full" [showButtons]="true" inputId="installment" [min]="1" [max]="100">
+          </p-inputNumber>
+          <label for="installment">Número de parcialidad</label>
+        </span>
+      </div>
+      <div class="field col-12 md:col-3">
+        <span class="p-float-label">
+          <p-inputNumber [(ngModel)]="amount" inputId="amount" inputStyleClass="w-full" mode="decimal" [minFractionDigits]="2" [maxFractionDigits]="2"></p-inputNumber>
+          <label for="amount">Monto a pagar</label>
+        </span>
+      </div>
+      <div class="field col-12 md:col-3">
+        <span class="p-float-label">
+          <p-dropdown [options]="codeMon" [(ngModel)]="selectedCode" optionLabel="name" placeholder="Seleccione la moneda" styleClass="w-full"></p-dropdown>
+        </span>
+    </div>
+
+    </div>
+
+    <div class="flex w-full justify-content-center my-5">
+      <p-button styleClass="p-button-lg md:p-button" label="Emitir factura" icon="pi pi-check"></p-button>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
